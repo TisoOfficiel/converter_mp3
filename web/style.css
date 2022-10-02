@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #202124;
+}
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+h1{
+  color: white;
+}
+form{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.download{
+  display: flex;
+  margin-top: 36px;
+  justify-content: space-between;
+  width: 100%;
+}
+.download p{
+  color: white;
+}
+#data{
+  height:40px;
+  margin-bottom: 9px;
+  font-size: 18px;
+  background: #51535a;
+  color: white;
+  border: none;
+  padding: 5px;
+  padding-left: 15px;
+  border-radius:5px;
+}
+#stop{
+  width: 70%;
+  margin-top: 18px;
+  cursor:pointer;
+  font-size: 18px;
+  height:25px;
+  border-radius:5px;
+  border: none;
+  color: white;
+  background:red;
+  transition:0.5s;
+}
+
+#stop:hover{
+  transform: scale(1.1);
+}
+
+#data:focus{
+  outline: none;
+}
+
+#submit{
+  cursor:pointer;
+  font-size: 18px;
+  height:50px;
+  border-radius:5px;
+  border: none;
+  color: white;
+  transition: 0.5s;
+  background: radial-gradient(circle, rgba(222,98,98,1) 0%, rgba(255,184,140,1) 100%);
+}
+
+#submit:hover{
+  background: radial-gradient(circle, rgb(221, 109, 109) 0%, rgb(247, 188, 152) 100%);
+}
+.active{
+  display: block !important;
+}
+.circle-loader {
+  margin-bottom: 1.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-left-color: #5cb85c;
+  animation: loader-spin 1.2s infinite linear;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+.load-complete {
+  -webkit-animation: none;
+  animation: none;
+  border-color: #5cb85c;
+  transition: border 500ms ease-out;
+}
+.checkmark {
+  display: none;
+}
+.checkmark.draw:after {
+  animation-duration: 800ms;
+  animation-timing-function: ease;
+  animation-name: checkmark;
+  transform: scaleX(-1) rotate(135deg);
+}
+.checkmark:after {
+  opacity: 1;
+  height: 1.5em;
+  width: 0.75em;
+  transform-origin: left top;
+  border-right: 3px solid #5cb85c;
+  border-top: 3px solid #5cb85c;
+  content: '';
+  left: 0.65em;
+  top: 1.5em;
+  position: absolute;
+}
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 0.75em;
+    opacity: 1;
+  }
+  40% {
+    height: 1.5em;
+    width: 0.75em;
+    opacity: 1;
+  }
+  100% {
+    height: 1.5em;
+    width: 0.75em;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter MP3</title>
+    <script src="main.js"></script>
+    <link rel="icon" href="../YouTube_23392.ico">
+    <script type="text/javascript" src="../eel.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById("myForm").addEventListener("submit", function(e) {
+                e.preventDefault() // Cancel the default action
+            });
+        });       
+     </script>
+</head>
+<body>
+    <div class="container" style='position:absolute; left:50%; top:50%; transform: translate(-50%, -50%)'>
+        <h1>Youtube Download</h1>
+
+       
+        <form id="myForm" action="#">
+            <input type="text" name="data" id="data" placeholder="Entrer l'URL ICI">
+            <input id="submit" type="submit" value="TÉLÉCHARGER" onclick="yt()">
+        </form>
+        <div class="download">
+            <p id="results"></p>
+            <div class="circle-loader" id="circle-loader" style="display:none">
+                <div id="checkmark" class="checkmark draw active"></div>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>
